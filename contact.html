@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Morningside Mobile for phones, accessories, Bell mobility plans, and in-store assistance."
+    />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <title>Contact | Morningside Mobile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Primary navigation">
+        <a href="index.html" class="brand" aria-label="Morningside Mobile Home">
+          <span class="brand-icon" aria-hidden="true">
+            <img
+              class="brand-logo"
+              src="assets/img/logo.jpg"
+              alt="Morningside Mobile logo"
+            />
+          </span>
+          <span class="brand-text-wrap">
+            <span class="brand-text">Morningside Mobile</span>
+          </span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Open menu"
+          type="button"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-inner">
+          <p class="hero-badge">Bell Authorized Dealer</p>
+          <h1>Contact Our Team</h1>
+          <p>
+            Visit us in-store or send a message to learn about phones,
+            accessories, upgrades, and Bell mobility plan options.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="container contact-grid">
+          <div class="contact-card">
+            <h2>Get in Touch</h2>
+            <p>
+              Fill out the form and a team member will respond shortly with the
+              best options for your needs.
+            </p>
+            <p class="form-alert form-alert-success" id="form-success-alert" hidden>
+              Thanks! Your message has been sent successfully.
+            </p>
+            <form class="contact-form" action="https://formspree.io/f/mykjzerb" method="post">
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" required />
+
+              <label for="email">Email Address</label>
+              <input id="email" name="email" type="email" required />
+
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" />
+
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+
+              <input type="hidden" name="_subject" value="New Contact Message - Morningside Mobile" />
+              <input type="hidden" name="_next" value="contact.html?success=true" />
+
+              <button class="btn btn-primary" type="submit">Send Message</button>
+            </form>
+          </div>
+
+          <aside class="contact-info">
+            <h3>Store Information</h3>
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <a
+                  class="contact-info-icon"
+                  href="https://maps.app.goo.gl/bGHiUw6wK4r9Gwtq7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open address in Google Maps"
+                >
+                  <i class="fa-solid fa-location-dot"></i>
+                </a>
+                <div>
+                  <h4>Address</h4>
+                  <p>
+                    <a
+                      href="https://maps.app.goo.gl/bGHiUw6wK4r9Gwtq7"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >1141 Morningside Ave, Scarborough, ON M1B 0A7</a
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <a class="contact-info-icon" href="tel:4162858100" aria-label="Call store phone number">
+                  <i class="fa-solid fa-phone"></i>
+                </a>
+                <div>
+                  <h4>Phone</h4>
+                  <p><a href="tel:4162858100">+1 (416) 285-8100</a></p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <a
+                  class="contact-info-icon"
+                  href="https://wa.me/14162858100"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open WhatsApp chat"
+                >
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <div>
+                  <h4>WhatsApp</h4>
+                  <p>
+                    <a href="https://wa.me/14162858100" target="_blank" rel="noopener noreferrer"
+                      >Chat on WhatsApp</a
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <a
+                  class="contact-info-icon"
+                  href="mailto:morningsidemobile@gmail.com"
+                  aria-label="Send email to Morningside Mobile"
+                >
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+                <div>
+                  <h4>Email</h4>
+                  <p>
+                    <a href="mailto:morningsidemobile@gmail.com">morningsidemobile@gmail.com</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <span class="contact-info-icon" aria-hidden="true">
+                  <i class="fa-solid fa-clock"></i>
+                </span>
+                <div>
+                  <h4>Business Hours</h4>
+                  <p>Mon - Sat: 10:00 AM - 8:00 PM</p>
+                  <p>Sunday: 10:00 AM - 6:00 PM</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-social">
+              <h4>Follow Us</h4>
+              <div class="social-links" aria-label="Follow Morningside Mobile on social media">
+                <a
+                  href="https://www.facebook.com/share/16yS9xvTxd/?mibextid=wwXIfr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                >
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/morningside.mobile?igsh=MThoNXhtaGxqd3Roeg=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.tiktok.com/@morningsidemobile?is_from_webapp=1&sender_device=pc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="TikTok"
+                >
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+              </div>
+            </div>
+            <a class="btn btn-secondary" href="products.html">Browse Products</a>
+          </aside>
+        </div>
+
+        <div class="container">
+          <div class="contact-map-card">
+            <h3>Find Us on the Map</h3>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5759.277955453849!2d-79.20167792334716!3d43.80110384285181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4da0831249ae3%3A0x7359c554949b74ab!2sMorningside%20Mobile%20-%20Bell%20Authorized%20Dealer!5e0!3m2!1sen!2sca!4v1771743679021!5m2!1sen!2sca"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Morningside Mobile Google Map"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <section>
+          <h3>Morningside Mobile</h3>
+          <p class="footer-highlight">Bell Authorized Dealer</p>
+          <p>Smart devices, accessories, and affordable mobility plans you can trust.</p>
+        </section>
+        <section>
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Visit Us</h3>
+          <p>1141 Morningside Ave, Scarborough, ON M1B 0A7</p>
+          <p>Mon - Sat: 10:00 AM - 8:00 PM</p>
+          <p>Sunday: 10:00 AM - 6:00 PM</p>
+        </section>
+        <section>
+          <h3>Follow Us</h3>
+          <div class="social-links" aria-label="Social media links">
+            <a href="https://www.facebook.com/share/16yS9xvTxd/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/morningside.mobile?igsh=MThoNXhtaGxqd3Roeg==" target="_blank" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@morningsidemobile?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+        </section>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Morningside Mobile. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

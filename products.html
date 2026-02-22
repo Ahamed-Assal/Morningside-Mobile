@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Shop affordable smartphones, accessories, and Bell mobility plans at Morningside Mobile."
+    />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <title>Products | Morningside Mobile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Primary navigation">
+        <a href="index.html" class="brand" aria-label="Morningside Mobile Home">
+          <span class="brand-icon" aria-hidden="true">
+            <img
+              class="brand-logo"
+              src="assets/img/logo.jpg"
+              alt="Morningside Mobile logo"
+            />
+          </span>
+          <span class="brand-text-wrap">
+            <span class="brand-text">Morningside Mobile</span>
+          </span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Open menu"
+          type="button"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-inner">
+          <p class="hero-badge">Bell Authorized Dealer</p>
+          <h1>Phones, Accessories, and Plans Built Around Your Budget</h1>
+          <p>
+            Browse our latest devices and accessories, then choose mobility options
+            designed for students, families, and professionals.
+          </p>
+        </div>
+      </section>
+
+      <section class="products-section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Featured Smartphones</h2>
+            <a class="btn btn-secondary" href="contact.html">Ask About Availability</a>
+          </div>
+
+          <div class="products-toolbar" aria-label="Filter featured smartphones">
+            <div class="search-field">
+              <label for="product-search">Search phones</label>
+              <input
+                id="product-search"
+                type="search"
+                placeholder="Search by model or feature..."
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="filter-field">
+              <label for="product-filter">Filter Brand</label>
+              <select id="product-filter">
+                <option value="all">All Brands</option>
+                <option value="iphone">iPhone</option>
+                <option value="samsung">Samsung</option>
+              </select>
+            </div>
+
+            <div class="filter-field">
+              <label for="price-filter">Price Range</label>
+              <select id="price-filter">
+                <option value="all">All Prices</option>
+                <option value="under500">Under $500</option>
+                <option value="500to1000">$500 - $1000</option>
+                <option value="1000plus">$1000+</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="products-grid phone-products-grid">
+            <article class="product-card" data-category="iphone premium" data-price="899">
+              <img
+                src="assets/img/17pm3.png"
+                alt="Iphone 17 Pro Max"
+              />
+              <div class="product-content">
+                <h3>Iphone 17 Pro Max</h3>
+                <p>256GB storage, all-day battery, 5G ready.</p>
+                <p class="product-price">From $29/mo</p>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="samsung premium" data-price="499">
+              <img
+                src="assets/img/s25ultra.jpg"
+                alt="Samsung Galaxy S25 Ultra"
+              />
+              <div class="product-content">
+                <h3>Samsung Galaxy S25 Ultra</h3>
+                <p>256GB storage, all-day battery, 5G ready.</p>
+                <p class="product-price">From $24/mo</p>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="iphone premium" data-price="1299">
+              <img
+                src="assets/img/17p3.jpg"
+                alt="Iphone 17 Pro"
+              />
+              <div class="product-content">
+                <h3>Iphone 17 Pro</h3>
+                <p>256GB storage, all-day battery, 5G ready.</p>
+                <p class="product-price">From $39/mo</p>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="samsung premium" data-price="459">
+              <img
+                src="assets/img/s25fe.jpg"
+                alt="Samsung Galaxy S25 FE"
+              />
+              <div class="product-content">
+                <h3>Samsung Galaxy S25 FE</h3>
+                <p>128GB storage, all-day battery, 5G ready.</p>
+                <p class="product-price">From $19/mo</p>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="iphone premium" data-price="999">
+              <img
+                src="assets/img/16.png"
+                alt="Iphone 16"
+              />
+              <div class="product-content">
+                <h3>Iphone 16</h3>
+                <p>128GB storage, all-day battery, 5G ready.</p>
+                <p class="product-price">From $34/mo</p>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="samsung premium" data-price="1499">
+              <img
+                src="assets/img/zflip7.jpg"
+                alt="Samsung Galaxy Z Flip 7"
+              />
+              <div class="product-content">
+                <h3>Samsung Galaxy Z Flip 7</h3>
+                <p>256GB storage, all-day battery, 5G ready.</p>
+                <p class="product-price">From $49/mo</p>
+              </div>
+            </article>
+          </div>
+
+          <p class="products-empty-state" id="products-empty-state" hidden>
+            No phones match your search. Try a different keyword or category.
+          </p>
+        </div>
+      </section>
+
+
+      <section class="plans-section">
+        <div class="container">
+          <h2>Popular Bell Mobility Plans</h2>
+          <p class="section-intro">
+            Every plan includes trusted network coverage and support from your
+            local Morningside Mobile team.
+          </p>
+          <div class="plans-grid">
+            <article class="plan-card">
+              <h3>Starter Plan</h3>
+              <p class="plan-price">$45/mo</p>
+              <ul>
+                <li>30GB high-speed data</li>
+                <li>Unlimited Canada-wide calling</li>
+                <li>Voicemail and call display</li>
+              </ul>
+            </article>
+
+            <article class="plan-card plan-card-featured">
+              <p class="plan-badge">Most Popular</p>
+              <h3>Unlimited Plus</h3>
+              <p class="plan-price">$65/mo</p>
+              <ul>
+                <li>75GB high-speed data</li>
+                <li>Unlimited calls and texts</li>
+                <li>US roaming add-on options</li>
+              </ul>
+            </article>
+
+            <article class="plan-card">
+              <h3>Family Share</h3>
+              <p class="plan-price">$95/mo</p>
+              <ul>
+                <li>120GB shared data</li>
+                <li>Up to 4 lines supported</li>
+                <li>Priority in-store setup support</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="accessories-section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Popular Accessories</h2>
+            <a class="btn btn-secondary" href="contact.html">Check In-Store Stock</a>
+          </div>
+          <div class="products-toolbar accessories-toolbar" aria-label="Search accessories">
+            <div class="search-field">
+              <label for="accessory-search">Search accessories</label>
+              <input
+                id="accessory-search"
+                type="search"
+                placeholder="Search by accessory name or feature..."
+                autocomplete="off"
+              />
+            </div>
+          </div>
+          <div class="products-grid accessories-products-grid">
+            <article class="product-card">
+              <img
+                src="assets/img/accessory-case-placeholder.jpg"
+                alt="Protective phone cases on display"
+              />
+              <div class="product-content">
+                <h3>Protective Cases</h3>
+                <p>Shockproof, slim-fit, and premium cases for top brands.</p>
+                <p class="product-price">From $24.99</p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img
+                src="assets/img/accessory-charger-placeholder.jpg"
+                alt="Fast charging adapters and cables"
+              />
+              <div class="product-content">
+                <h3>Chargers & Cables</h3>
+                <p>Fast chargers, USB-C cables, and reliable charging kits.</p>
+                <p class="product-price">From $19.99</p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img
+                src="assets/img/accessory-audio-placeholder.jpg"
+                alt="Wireless earbuds and headphones"
+              />
+              <div class="product-content">
+                <h3>Wireless Audio</h3>
+                <p>Bluetooth earbuds and headphones with clear, rich sound.</p>
+                <p class="product-price">From $49.99</p>
+              </div>
+            </article>
+          </div>
+          <p class="products-empty-state" id="accessories-empty-state" hidden>
+            No accessories match your search. Try a different keyword.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <section>
+          <h3>Morningside Mobile</h3>
+          <p class="footer-highlight">Bell Authorized Dealer</p>
+          <p>Smart devices, accessories, and affordable mobility plans you can trust.</p>
+        </section>
+        <section>
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Visit Us</h3>
+          <p>1141 Morningside Ave, Scarborough, ON M1B 0A7</p>
+          <p>Mon - Sat: 10:00 AM - 8:00 PM</p>
+          <p>Sunday: 10:00 AM - 6:00 PM</p>
+        </section>
+        <section>
+          <h3>Follow Us</h3>
+          <div class="social-links" aria-label="Social media links">
+            <a href="https://www.facebook.com/share/16yS9xvTxd/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/morningside.mobile?igsh=MThoNXhtaGxqd3Roeg==" target="_blank" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@morningsidemobile?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+        </section>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Morningside Mobile. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
