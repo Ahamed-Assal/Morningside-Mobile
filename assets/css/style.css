@@ -1,16 +1,16 @@
 :root {
-  --bg-main: #f5f6fb;
-  --bg-soft: #eceffa;
+  --bg-main: #f3f5ff;
+  --bg-soft: #e9edff;
   --surface: #ffffff;
   --text-main: #1d1b2a;
   --text-muted: #5f5a77;
-  --line: #e6e7f2;
-  --purple-1: #c199ff;
-  --purple-2: #7d38f2;
-  --purple-3: #43108f;
-  --accent-gradient: linear-gradient(135deg, var(--purple-1), var(--purple-2) 50%, var(--purple-3));
-  --shadow-soft: 0 12px 30px rgba(67, 16, 143, 0.18);
-  --shadow-card: 0 12px 24px rgba(67, 16, 143, 0.12);
+  --line: #d9def4;
+  --purple-1: #667eea;
+  --purple-2: #764ba2;
+  --purple-3: #764ba2;
+  --accent-gradient: linear-gradient(315deg, #667eea 0%, #764ba2 100%);
+  --shadow-soft: 0 12px 30px rgba(75, 58, 192, 0.2);
+  --shadow-card: 0 12px 24px rgba(75, 58, 192, 0.12);
   --radius: 14px;
   --radius-sm: 10px;
   --transition: 0.24s ease;
@@ -76,7 +76,7 @@ a {
   width: 50px;
   height: 50px;
   flex-shrink: 0;
-  border-radius: 35%;
+  border-radius: 30%;
   display: grid;
   place-items: center;
   background: #fff;
@@ -134,18 +134,29 @@ a {
   border-radius: 999px;
   font-weight: 600;
   color: var(--text-main);
-  transition: color var(--transition), background-color var(--transition);
+  border: 1px solid transparent;
+  transition: color var(--transition), background-color var(--transition), border-color var(--transition);
 }
 
 .nav-links a:hover,
 .nav-links a:focus-visible {
   color: var(--purple-3);
-  background: #e6dbff;
+  background: #e9eeff;
+  border-color: #cdd8ff;
 }
 
 .nav-links a.active {
   color: #fff;
   background: var(--accent-gradient);
+  border-color: #6c73d8;
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.28);
+}
+
+.nav-links a.active:hover,
+.nav-links a.active:focus-visible {
+  color: #fff;
+  background: var(--accent-gradient);
+  border-color: #6c73d8;
 }
 
 .menu-toggle {
@@ -331,6 +342,89 @@ a {
   margin: 0;
   color: var(--text-muted);
   font-size: 0.95rem;
+}
+
+.reviews-section {
+  padding: 4rem 0;
+}
+
+.reviews-photos-scroll {
+  overflow-x: auto;
+  padding-bottom: 0.45rem;
+  margin-bottom: 1rem;
+  scrollbar-width: thin;
+  scroll-snap-type: x proximity;
+}
+
+.reviews-photos-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(260px, 30%);
+  gap: 0.9rem;
+}
+
+.review-photo-card {
+  margin: 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.review-photo-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.review-photo-card figcaption {
+  padding: 0.65rem 0.8rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.reviews-scroll {
+  overflow-x: auto;
+  padding-bottom: 0.45rem;
+  scrollbar-width: thin;
+  scroll-snap-type: x mandatory;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(280px, 33%);
+  gap: 1rem;
+}
+
+.review-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.1rem;
+  box-shadow: var(--shadow-card);
+  scroll-snap-align: start;
+}
+
+.review-stars {
+  color: #f3b300;
+  letter-spacing: 1px;
+  margin-bottom: 0.6rem;
+  font-size: 0.92rem;
+}
+
+.review-card p {
+  margin: 0 0 0.7rem;
+  color: var(--text-muted);
+}
+
+.review-card h3 {
+  margin: 0;
+  font-size: 0.96rem;
+  color: var(--purple-3);
 }
 
 .site-footer {
@@ -706,6 +800,26 @@ a {
   margin-top: 0.15rem;
 }
 
+.contact-info-item .entrance-note {
+  margin-top: 0.45rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 8px;
+  color: #7a4100;
+  font-weight: 700;
+  background: #fff2d8;
+  border: 1px solid #ffd28a;
+  border-left: 5px solid #f59e0b;
+}
+
+.contact-info-item .entrance-note i {
+  color: #d97706;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
 .contact-info-item a {
   color: var(--purple-3);
   font-weight: 600;
@@ -810,43 +924,86 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .reviews-grid {
+    grid-auto-columns: minmax(270px, 70%);
+  }
+
+  .reviews-photos-track {
+    grid-auto-columns: minmax(240px, 62%);
+  }
+
   .products-toolbar {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 760px) {
+  .navbar {
+    min-height: 72px;
+    position: relative;
+  }
+
+  .brand-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand-text {
+    font-size: 1.45rem;
+  }
+
   .menu-toggle {
     display: inline-block;
+    border-color: #cfd6f3;
+    box-shadow: 0 6px 14px rgba(102, 126, 234, 0.14);
   }
 
   .nav-links {
     position: absolute;
-    top: calc(100% + 8px);
-    right: 4%;
-    width: min(320px, 92%);
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    width: 100%;
     flex-direction: column;
     align-items: stretch;
-    background: #fff;
-    border: 1px solid var(--line);
-    border-radius: var(--radius-sm);
-    box-shadow: var(--shadow-soft);
-    padding: 0.75rem;
+    gap: 0.18rem;
+    background: #ffffff;
+    border: 1px solid #d6ddf8;
+    border-radius: 12px;
+    box-shadow: 0 14px 28px rgba(47, 63, 179, 0.16);
+    padding: 0.5rem;
     opacity: 0;
     pointer-events: none;
-    transform: translateY(-8px);
+    transform: translateY(-6px) scale(0.98);
+    transform-origin: top center;
     transition: opacity var(--transition), transform var(--transition);
   }
 
   .nav-links.open {
     opacity: 1;
     pointer-events: auto;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+  }
+
+  .nav-links li {
+    width: 100%;
   }
 
   .nav-links a {
+    display: flex;
+    align-items: center;
     width: 100%;
-    border-radius: 8px;
+    min-height: 46px;
+    border-radius: 9px;
+    border: 1px solid transparent;
+    padding: 0.72rem 0.9rem;
+    font-weight: 600;
+  }
+
+  .nav-links a:hover,
+  .nav-links a:focus-visible {
+    border-color: #d9e1ff;
+    background: #f2f5ff;
   }
 
   .hero {
@@ -860,11 +1017,27 @@ a {
 }
 
 @media (max-width: 600px) {
+  .brand-text {
+    font-size: 1.28rem;
+  }
+
   .card-grid {
     grid-template-columns: 1fr;
   }
 
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .reviews-grid {
+    grid-auto-columns: minmax(250px, 86%);
+  }
+
+  .reviews-photos-track {
+    grid-auto-columns: minmax(220px, 84%);
+  }
+
+  .review-photo-card img {
+    height: 170px;
   }
 }
