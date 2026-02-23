@@ -153,3 +153,46 @@ if (formSuccessAlert) {
     window.history.replaceState({}, "", currentUrl.toString());
   }
 }
+
+const contactForm = document.querySelector(".contact-form");
+
+if (contactForm && formSuccessAlert) {
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton ? submitButton.textContent : "";
+    const formData = new FormData(contactForm);
+
+    formSuccessAlert.hidden = true;
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending...";
+    }
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send contact form.");
+      }
+
+      formSuccessAlert.hidden = false;
+      contactForm.reset();
+    } catch (error) {
+      console.error(error);
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+      }
+    }
+  });
+}
