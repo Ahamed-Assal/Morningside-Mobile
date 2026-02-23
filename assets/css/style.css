@@ -515,6 +515,11 @@ a {
   max-width: 760px;
 }
 
+.page-hero .hero-badge {
+  margin: 0 0 1rem;
+  color: var(--purple-3);
+}
+
 .page-hero h1 {
   margin: 0 0 0.8rem;
   font-size: clamp(1.7rem, 3.6vw, 2.7rem);
