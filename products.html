@@ -73,13 +73,13 @@
       <section class="products-section">
         <div class="container">
           <div class="section-heading">
-            <h2>Featured Smartphones</h2>
+            <h2>Featured Devices</h2>
             <a class="btn btn-secondary" href="contact.html">Ask About Availability</a>
           </div>
 
-          <div class="products-toolbar" aria-label="Filter featured smartphones">
+          <div class="products-toolbar" aria-label="Filter featured devices">
             <div class="search-field">
-              <label for="product-search">Search phones</label>
+              <label for="product-search">Search devices</label>
               <input
                 id="product-search"
                 type="search"
@@ -89,11 +89,12 @@
             </div>
 
             <div class="filter-field">
-              <label for="product-filter">Filter Brand</label>
+              <label for="product-filter">Filter Brand / Type</label>
               <select id="product-filter">
-                <option value="all">All Brands</option>
+                <option value="all">All Devices</option>
                 <option value="iphone">iPhone</option>
                 <option value="samsung">Samsung</option>
+                <option value="tablet">Tablets</option>
               </select>
             </div>
 
@@ -106,9 +107,30 @@
                 <option value="1000plus">$1000+</option>
               </select>
             </div>
+
+            <div class="filter-field">
+              <label for="price-sort">Sort by Price</label>
+              <select id="price-sort">
+                <option value="default">Default</option>
+                <option value="lowtohigh">Low to High</option>
+                <option value="hightolow">High to Low</option>
+              </select>
+            </div>
           </div>
 
           <div class="products-grid phone-products-grid">
+            <article class="product-card" data-category="tablet value" data-price="149">
+              <img
+                src="assets/img/tab.jpg"
+                alt="T90 Tablet"
+              />
+              <div class="product-content">
+                <h3>T90 Tablet</h3>
+                <p>11-inch display, 128GB storage, 4GB RAM, 8000mAh battery, and comes with mouse and keyboard.</p>
+                <p class="product-price">From $149.99</p>
+              </div>
+            </article>
+
             <article class="product-card" data-category="iphone premium" data-price="899">
               <img
                 src="assets/img/17pm3.png"
@@ -117,7 +139,7 @@
               <div class="product-content">
                 <h3>Iphone 17 Pro Max</h3>
                 <p>256GB storage, all-day battery, 5G ready.</p>
-                <p class="product-price">From $29/mo</p>
+                <p class="product-price">From $31/mo</p>
               </div>
             </article>
 
@@ -129,7 +151,7 @@
               <div class="product-content">
                 <h3>Samsung Galaxy S25 Ultra</h3>
                 <p>256GB storage, all-day battery, 5G ready.</p>
-                <p class="product-price">From $24/mo</p>
+                <p class="product-price">From $21/mo</p>
               </div>
             </article>
 
@@ -141,7 +163,7 @@
               <div class="product-content">
                 <h3>Iphone 17 Pro</h3>
                 <p>256GB storage, all-day battery, 5G ready.</p>
-                <p class="product-price">From $39/mo</p>
+                <p class="product-price">From $28/mo</p>
               </div>
             </article>
 
@@ -153,7 +175,7 @@
               <div class="product-content">
                 <h3>Samsung Galaxy S25 FE</h3>
                 <p>128GB storage, all-day battery, 5G ready.</p>
-                <p class="product-price">From $19/mo</p>
+                <p class="product-price">From $3/mo</p>
               </div>
             </article>
 
@@ -165,7 +187,7 @@
               <div class="product-content">
                 <h3>Iphone 16</h3>
                 <p>128GB storage, all-day battery, 5G ready.</p>
-                <p class="product-price">From $34/mo</p>
+                <p class="product-price">From $8/mo</p>
               </div>
             </article>
 
@@ -177,13 +199,55 @@
               <div class="product-content">
                 <h3>Samsung Galaxy Z Flip 7</h3>
                 <p>256GB storage, all-day battery, 5G ready.</p>
-                <p class="product-price">From $49/mo</p>
+                <p class="product-price">From $14/mo</p>
               </div>
             </article>
+
+            <article class="product-card" data-category="iphone value" data-price="799">
+              <img
+                src="assets/img/17.png"
+                alt="Iphone 17"
+              />
+              <div class="product-content">
+                <h3>Iphone 17</h3>
+                <p>256GB storage, all-day battery, 5G ready.</p>
+                <p class="product-price">From $22/mo</p>
+              </div>
+            </article>
+
+            <!-- <article class="product-card" data-category="samsung value" data-price="899">
+              <img
+                src="assets/img/s25fe.jpg"
+                alt="Samsung Galaxy S25"
+              />
+              <div class="product-content">
+                <h3>Samsung Galaxy S25</h3>
+                <p>Premium camera quality with balanced everyday performance.</p>
+                <p class="product-price">From $31/mo</p>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="iphone premium" data-price="1399">
+              <img
+                src="assets/img/17pm3.png"
+                alt="Iphone 17 Pro Max Titanium"
+              />
+              <div class="product-content">
+                <h3>Iphone 17 Pro Max Titanium</h3>
+                <p>Flagship speed, pro camera system, and premium finish.</p>
+                <p class="product-price">From $54/mo</p>
+              </div>
+            </article> -->
+          </div>
+
+          <div class="products-show-more-wrap">
+            <button class="btn btn-secondary" id="show-more-phones" type="button">
+              Show More Phones
+            </button>
           </div>
 
           <p class="products-empty-state" id="products-empty-state" hidden>
-            No phones match your search. Try a different keyword or category.
+            No devices match your search. Try a different keyword or filter.
           </p>
         </div>
       </section>
@@ -191,7 +255,7 @@
 
       <section class="plans-section">
         <div class="container">
-          <h2>Popular Bell Mobility Plans</h2>
+          <h2>Popular Bell Mobility BYOD Plans</h2>
           <p class="section-intro">
             Every plan includes trusted network coverage and support from your
             local Morningside Mobile team.
@@ -251,39 +315,117 @@
           <div class="products-grid accessories-products-grid">
             <article class="product-card">
               <img
-                src="assets/img/accessory-case-placeholder.jpg"
-                alt="Protective phone cases on display"
+                src="assets/img/usbc.jpg"
+                alt="USB-C Charger"
               />
               <div class="product-content">
-                <h3>Protective Cases</h3>
-                <p>Shockproof, slim-fit, and premium cases for top brands.</p>
-                <p class="product-price">From $24.99</p>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img
-                src="assets/img/accessory-charger-placeholder.jpg"
-                alt="Fast charging adapters and cables"
-              />
-              <div class="product-content">
-                <h3>Chargers & Cables</h3>
-                <p>Fast chargers, USB-C cables, and reliable charging kits.</p>
+                <h3>USB-C Charger</h3>
+                <p>USB-C 20W Fast Charger. Efficient and reliable charging for your phone.</p>
                 <p class="product-price">From $19.99</p>
               </div>
             </article>
 
             <article class="product-card">
               <img
-                src="assets/img/accessory-audio-placeholder.jpg"
-                alt="Wireless earbuds and headphones"
+                src="assets/img/w.charger.sp.jpg"
+                alt="Wireless Charger speaker"
               />
               <div class="product-content">
-                <h3>Wireless Audio</h3>
-                <p>Bluetooth earbuds and headphones with clear, rich sound.</p>
+                <h3>Wireless Charger Speaker</h3>
+                <p>Wireless charger with built-in speaker and lamp. A convenient 3-in-1 device for your phone. Perfect for your desk or bedside.</p><br>
+                <p class="product-price">From $89.99</p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img
+                src="assets/img/jblh.webp"
+                alt="JBL Headphones"
+              />
+              <div class="product-content">
+                <h3>JBL Headphones</h3>
+                <p>JBL Bluetooth Headphones With Noise Cancellation.</p>
                 <p class="product-price">From $49.99</p>
               </div>
             </article>
+
+            <article class="product-card">
+              <img
+                src="assets/img/mg.charger.jpg"
+                alt="MagSafe Charger"
+              />
+              <div class="product-content">
+                <h3>MagSafe Charger</h3>
+                <p>MagSafe Charger with 10,000mAh battery capacity for reliable charging. Perfect for travel or on the go.</p>
+                <p class="product-price">From $49.99</p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img
+                src="assets/img/s.watch.jpg"
+                alt="Smart Watch"
+              />
+              <div class="product-content">
+                <h3>Smart Watch</h3>
+                <p>Smart Watch with fitness tracking, heart rate monitoring, and sleep tracking.</p>
+                <p class="product-price">From $49.99</p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img
+                src="assets/img/earbuds.webp"
+                alt="Earbuds"
+              />
+              <div class="product-content">
+                <h3>Earbuds</h3>
+                <p>Wireless earbuds with noise cancellation and long battery life.</p>
+                <p class="product-price">From $49.99</p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img
+                src="assets/img/sp.webp"
+                alt="Screen Protector"
+              />
+              <div class="product-content">
+                <h3>Screen Protector</h3>
+                <p>Tempered Glass for iPhone & Samsung. Regular | Privacy | Matte.</p>
+                <p class="product-price">From $14.99</p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img
+                src="assets/img/phonecase.webp"
+                alt="Phone Case"
+              />
+              <div class="product-content">
+                <h3>Phone Case</h3>
+                <p>Multiple designs available for iPhone and Samsung. Transparent | Silicone | Printed.</p>
+                <p class="product-price">From $19.99</p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img
+                src="assets/img/cable.png"
+                alt="Charging Cable"
+              />
+              <div class="product-content">
+                <h3>Charging Cable</h3>
+                <p>Charging Cables Available in C-C, C-Lightning, and USB-Lightning.</p>
+                <p class="product-price">From $14.99</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="products-show-more-wrap">
+            <button class="btn btn-secondary" id="show-more-accessories" type="button">
+              Show More Accessories
+            </button>
           </div>
           <p class="products-empty-state" id="accessories-empty-state" hidden>
             No accessories match your search. Try a different keyword.
