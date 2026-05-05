@@ -99,12 +99,11 @@
             </div>
 
             <div class="filter-field">
-              <label for="price-filter">Price Range</label>
+              <label for="price-filter">Purchase Option</label>
               <select id="price-filter">
-                <option value="all">All Prices</option>
-                <option value="under500">Under $500</option>
-                <option value="500to1000">$500 - $1000</option>
-                <option value="1000plus">$1000+</option>
+                <option value="all">All Options</option>
+                <option value="withplan">With Plan</option>
+                <option value="buyout">Buy-Out</option>
               </select>
             </div>
 
@@ -119,7 +118,7 @@
           </div>
 
           <div class="products-grid phone-products-grid">
-            <article class="product-card" data-category="tablet value" data-price="149">
+            <article class="product-card" data-category="tablet value zte" data-price="149" data-option="buyout">
               <img
                 src="assets/img/tab.jpg"
                 alt="T90 Tablet"
@@ -131,7 +130,7 @@
               </div>
             </article>
 
-            <article class="product-card" data-category="iphone premium" data-price="899">
+            <article class="product-card" data-category="iphone premium tmobile att" data-price="899" data-option="withplan">
               <img
                 src="assets/img/17pm3.png"
                 alt="Iphone 17 Pro Max"
@@ -139,23 +138,23 @@
               <div class="product-content">
                 <h3>Iphone 17 Pro Max</h3>
                 <p>256GB storage, all-day battery, 5G ready.</p>
-                <p class="product-price">From $31/mo</p>
+                <!-- <p class="product-price">From $31/mo</p> -->
               </div>
             </article>
 
-            <article class="product-card" data-category="samsung premium" data-price="499">
+            <article class="product-card" data-category="samsung premium tmobile att" data-price="499" data-option="withplan">
               <img
-                src="assets/img/s25ultra.jpg"
-                alt="Samsung Galaxy S25 Ultra"
+                src="assets/img/S26Ultra.png"
+                alt="Samsung Galaxy S26 Ultra"
               />
               <div class="product-content">
-                <h3>Samsung Galaxy S25 Ultra</h3>
-                <p>256GB storage, all-day battery, 5G ready.</p>
-                <p class="product-price">From $21/mo</p>
+                <h3>Samsung Galaxy S26 Ultra</h3>
+                <p>512GB storage, all-day battery, 5G ready.</p>
+                <!-- <p class="product-price">From $21/mo</p> -->
               </div>
             </article>
 
-            <article class="product-card" data-category="iphone premium" data-price="1299">
+            <article class="product-card" data-category="iphone premium tmobile att" data-price="1299" data-option="withplan">
               <img
                 src="assets/img/17p3.jpg"
                 alt="Iphone 17 Pro"
@@ -163,23 +162,23 @@
               <div class="product-content">
                 <h3>Iphone 17 Pro</h3>
                 <p>256GB storage, all-day battery, 5G ready.</p>
-                <p class="product-price">From $28/mo</p>
+                <!-- <p class="product-price">From $28/mo</p> -->
               </div>
             </article>
 
-            <article class="product-card" data-category="samsung premium" data-price="459">
+            <article class="product-card" data-category="samsung premium tmobile att" data-price="459" data-option="withplan">
               <img
-                src="assets/img/s25fe.jpg"
-                alt="Samsung Galaxy S25 FE"
+                src="assets/img/S26.png"
+                alt="Samsung Galaxy S26"
               />
               <div class="product-content">
-                <h3>Samsung Galaxy S25 FE</h3>
+                <h3>Samsung Galaxy S26</h3>
                 <p>128GB storage, all-day battery, 5G ready.</p>
-                <p class="product-price">From $3/mo</p>
+                <!-- <p class="product-price">From $3/mo</p> -->
               </div>
             </article>
 
-            <article class="product-card" data-category="iphone premium" data-price="999">
+            <article class="product-card" data-category="iphone premium tmobile att" data-price="999" data-option="withplan">
               <img
                 src="assets/img/16.png"
                 alt="Iphone 16"
@@ -187,11 +186,11 @@
               <div class="product-content">
                 <h3>Iphone 16</h3>
                 <p>128GB storage, all-day battery, 5G ready.</p>
-                <p class="product-price">From $8/mo</p>
+                <!-- <p class="product-price">From $8/mo</p> -->
               </div>
             </article>
 
-            <article class="product-card" data-category="samsung premium" data-price="1499">
+            <article class="product-card" data-category="samsung premium tmobile att" data-price="1499" data-option="withplan">
               <img
                 src="assets/img/zflip7.jpg"
                 alt="Samsung Galaxy Z Flip 7"
@@ -199,11 +198,11 @@
               <div class="product-content">
                 <h3>Samsung Galaxy Z Flip 7</h3>
                 <p>256GB storage, all-day battery, 5G ready.</p>
-                <p class="product-price">From $14/mo</p>
+                <!-- <p class="product-price">From $14/mo</p> -->
               </div>
             </article>
 
-            <article class="product-card" data-category="iphone value" data-price="799">
+            <article class="product-card" data-category="iphone value tmobile att" data-price="799" data-option="withplan">
               <img
                 src="assets/img/17.png"
                 alt="Iphone 17"
@@ -211,7 +210,7 @@
               <div class="product-content">
                 <h3>Iphone 17</h3>
                 <p>256GB storage, all-day battery, 5G ready.</p>
-                <p class="product-price">From $22/mo</p>
+                <!-- <p class="product-price">From $22/mo</p> -->
               </div>
             </article>
 
@@ -262,12 +261,13 @@
           </p>
           <div class="plans-grid">
             <article class="plan-card">
-              <h3>Starter Plan</h3>
-              <p class="plan-price">$40/mo</p>
+              <h3 class="plan-name">Starter Plan</h3>
+              <br>
+              <!-- <p class="plan-price">$40/mo</p> -->
               <ul>
                 <li>100GB High-Speed Data</li>
                 <li>Unlimited Canada-Wide Calling and US Roaming</li>
-                <li>1000 Minutes of Calling to Selected 6 Countries</li>
+                <!-- <li>1000 Minutes of Calling to Selected 6 Countries</li> -->
                 <li>Unlimited International Texting</li>
                 <li>5G Network Access</li>
                 <li>No Contract</li>
@@ -277,8 +277,9 @@
 
             <article class="plan-card plan-card-featured">
               <p class="plan-badge">Most Popular</p>
-              <h3>Ultra Plan</h3>
-              <p class="plan-price">$65/mo</p>
+              <h3 class="plan-name">Ultra Plan</h3>
+              <br>
+              <!-- <p class="plan-price">$65/mo</p> -->
               <ul>
                 <li>250GB High-Speed Data</li>
                 <li>Unlimited Canada-Wide Calling</li>
@@ -291,8 +292,9 @@
             </article>
 
             <article class="plan-card">
-              <h3>Max Plan</h3>
-              <p class="plan-price">$50/mo</p>
+              <h3 class="plan-name">Max Plan</h3>
+              <br>
+              <!-- <p class="plan-price">$50/mo</p> -->
               <ul>
                 <li>175GB High-Speed Data</li>
                 <li>Unlimited Canada-Wide Calling and US/Mexico Roaming</li>

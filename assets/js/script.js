@@ -163,30 +163,24 @@ if (
   const updateProductFilters = () => {
     const searchTerm = productSearchInput.value.trim().toLowerCase();
     const selectedCategory = productFilterSelect.value;
-    const selectedPriceRange = productPriceFilter.value;
+    const selectedPurchaseOption = productPriceFilter.value;
     const selectedPriceSort = productPriceSort.value;
     const matchedCards = [];
 
     productCards.forEach((card) => {
       const cardText = card.textContent ? card.textContent.toLowerCase() : "";
       const cardCategories = card.getAttribute("data-category") || "";
-      const priceValue = getCardDisplayPrice(card);
       const matchesSearch = cardText.includes(searchTerm);
       const matchesCategory =
         selectedCategory === "all" || cardCategories.includes(selectedCategory);
-      let matchesPrice = true;
+      const cardOption = card.getAttribute("data-option") || "withplan";
+      let matchesOption = true;
 
-      if (selectedPriceRange !== "all") {
-        if (selectedPriceRange === "under500") {
-          matchesPrice = priceValue < 500;
-        } else if (selectedPriceRange === "500to1000") {
-          matchesPrice = priceValue >= 500 && priceValue <= 1000;
-        } else if (selectedPriceRange === "1000plus") {
-          matchesPrice = priceValue > 1000;
-        }
+      if (selectedPurchaseOption !== "all") {
+        matchesOption = cardOption === selectedPurchaseOption;
       }
 
-      if (matchesSearch && matchesCategory && matchesPrice) {
+      if (matchesSearch && matchesCategory && matchesOption) {
         matchedCards.push(card);
         return;
       }
