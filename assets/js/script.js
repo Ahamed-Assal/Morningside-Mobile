@@ -357,3 +357,35 @@ if (contactForm && formSuccessAlert) {
     }
   });
 }
+
+const mothersDayPopup = document.querySelector("#mothers-day-popup");
+
+if (mothersDayPopup) {
+  const popupCloseTriggers = mothersDayPopup.querySelectorAll("[data-popup-close]");
+
+  const openPopup = () => {
+    mothersDayPopup.hidden = false;
+    window.requestAnimationFrame(() => {
+      mothersDayPopup.classList.add("is-open");
+    });
+    document.body.classList.add("has-popup-open");
+  };
+
+  const closePopup = () => {
+    mothersDayPopup.classList.remove("is-open");
+    document.body.classList.remove("has-popup-open");
+    mothersDayPopup.hidden = true;
+  };
+
+  window.setTimeout(openPopup, 700);
+
+  popupCloseTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", closePopup);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !mothersDayPopup.hidden) {
+      closePopup();
+    }
+  });
+}
